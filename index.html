@@ -11,10 +11,10 @@
     <style>
         /* Custom Styles */
         .hero {
-            background: url('ai_generated_cover.jpg') center/cover no-repeat;
+            background: url('images/ai_generated_cover.jpg') center/cover no-repeat;
             color: white;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-            height: 25vh;
+            height: 23vh;
             display: flex;
             align-items: top;
             justify-content: center;
@@ -43,7 +43,7 @@
         <h1>Vishak Narayanan</h1>
         \<center>
         <p>Researcher in Embedded and Energy-Harvesting Systems, Ubiquitous Computing</p>
-        <a href="#contact" class="btn btn-primary btn-lg mt-3">Get in Touch</a>
+        <a href="mailto:vishakn@iastate.edu" class="btn btn-primary btn-lg mt-3">Get in Touch</a>
     </div>
 </section>
 
@@ -73,13 +73,18 @@
         <div class="row align-items-center">
             <!-- Image Column -->
             <div class="col-md-4 text-center mb-4 mb-md-0">
-                <img src="Title_VN.jpg" alt="Vishak Narayanan" class="img-fluid rounded-circle" style="max-width: 200px;">
+                <img src="images/Title_VN.jpg" alt="Vishak Narayanan" class="img-fluid rounded-circle" style="max-width: 200px;">
+                <p class="lead"> Ph.D., Computer Engineering @ ISU </p>
+                <p class="lead"> <a href="doc/Vishak_cv.pdf" target="_blank">Open CV</a> <a href="doc/Vishak_cv.pdf" download>Download CV</a>
+                <p><a href="https://github.com/vishakn95" class="btn btn-outline-dark btn-lg mx-2"><i class="fab fa-github"></i> GitHub</a>
+                <a href="linkedin.com\in\vishak-narayanan-791758ba" class="btn btn-outline-primary btn-lg mx-2"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+                
             </div>
             <!-- Text Column -->
             <div class="col-md-8">
                 <h2>About Me</h2>
-                <p class="lead">I’m a researcher in embedded and energy-harvesting systems, with a focus on ubiquitous computing. My work involves designing energy and latency adaptive hardware-software co-design systems integrated with cross-stack optimizations for a range of low-power applications.</p>
-                <p>With a passion for innovation and a dedication to practical impact, my goal is to push the boundaries of what’s possible in tiny, resilient sensor node technology for various environments, including agriculture, infrastructure, and even outer space.</p>
+                <p class="lead">I’m a researcher in embedded and energy-harvesting systems, with a focus on ubiquitous computing. My work involves designing energy and latency-adaptive hardware-software co-design systems integrated with cross-stack optimizations to achive the best energy-efficiency. By developing hardware-software mechanism to achieve timely computation and communication in batteryless sensor nodes, my goal is to push the boundaries of what’s possible in these tiny, resilient sensor node technology for various environments, including agriculture, infrastructure, and even outer space.</p>
+                <p>Prior to my Ph.D, I completed my bachelors from SCMS School of Engineering and Technology, Cochin, Kerala, India. Outside research, I enjoy, travel adventures, working out in gym, cooking, playing volleyball, podcasts and reading, watching Manchester United and manga.   </p>
             </div>
         </div>
     </section>
@@ -92,7 +97,7 @@
                 <div class="card shadow-sm">
                     <div class="card-body text-center">
                         <h5 class="card-title">Embedded Systems</h5>
-                        <p class="card-text">Focused on the design and optimization of embedded systems for efficiency.</p>
+                        <p class="card-text">Focused on the design and optimization of embedded systems for energy-efficiency.</p>
                     </div>
                 </div>
             </div>
@@ -100,7 +105,7 @@
                 <div class="card shadow-sm">
                     <div class="card-body text-center">
                         <h5 class="card-title">Energy-Harvesting</h5>
-                        <p class="card-text">Research in systems that operate with energy harvesting from the environment.</p>
+                        <p class="card-text">Research in systems that operate solely with energy harvested from the environment.</p>
                     </div>
                 </div>
             </div>
@@ -123,32 +128,74 @@
         </div>
     </section>
 
+    <div class="row align-items-center">
+        <!-- Image Column -->
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="images/ifpga_system.jpg" alt="Vishak Narayanan"  style="max-width: 400px;">
+        </div>
+        <!-- Text Column -->
+        <div class="col-md-8">
+            <h2>BOBBER: A Prototyping platform for batteryless intermittent accelerators</h2>
+
+            <p class="lead"> Batteryless intermittent architectures are optimized for energy-efficiency rather than operating power or performance alone, due to performance of these systems dictated solely by energy harvesting and energy-efficiency. Real world applications (like crop health monitoring, wildfire monitoring etc.,)  require nodes to perform energy-efficient operation for certain computations (like Neural network inference), without having the need to rely on centralized processing (like cloud). To ensure this, a node should have energy and latency-adaptive heterogeneous specialized cores. With this goal, we developed BOBBER, an FPGA based prototyping platform for batteryless intermittent accelerators. BOBBER is a full stack solution with an MSP430 microcontroller that runs application software on top of an intermittency-aware firmware. BOBBER enables common neural network optimizations like reduced precision, sparsity, that current state-of-the-art batteryless intermittent accelerators lack, hence enabling timely computing with support for both hardware and software adaptivity.</p>
+        </div>
+    </div>
+
+
+    <div class="row align-items-center">
+        <!-- Image Column -->
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="images/constant_charge_system.jpg" alt="Vishak Narayanan"  style="max-width: 400px;">
+        </div>
+        <!-- Text Column -->
+        <div class="col-md-8">
+            <h2>A HW-SW mechanism to enable timely communication and sensing in batteryless intermittently-powered sensor networks --  (work in progress)</h2>
+
+            <p class="lead"> Batteryless operation has enabled applications where ultra-low cost, independence from infrastructure, and spatial sensor resolution are more important than bandwidth. These applications demand sampling rates ranging from 1 sample per 5 s to 1 sample per 200s.  Although these applications have been made feasible, current batteryless sensor node approaches still rely on direct connections to high-cost, continuously powered gateway nodes (e.g., battery-powered cellular-enabled nodes, wired RFID readers) due to their inability to operate in a timely fashion, i.e., in a coordinated manner.  Such architecture becomes limited by the cost and infrastructure reliance of the continuously powered nodes. In general nodes must guarantee to wake up at the same time to sense and communicate to another node, before the sensed date becomes stale.  By enabling coordination between batteryless nodes, without having to depend on an always-ON node, the cost of pervasive deployment can be significantly reduced and made more resilient.  For the purpose of robust coordination, we present the first hardware-based approach that enables predictable and adaptive intermittent wakeups despite variable and low energy harvesting rates. Our approach uses a hardware component that enforces a constant amount of time between node wakeups, with small variations. The software component dynamically corrects for those variations. Our approach guarantees that a node wakes up at the same time with guaranteed energy ensuring robust coordination of on-times for batteryless intermittently-powered systems. </p>
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <!-- Image Column -->
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="images/het_core_scheduling.jpg" alt="Vishak Narayanan"  style="max-width: 400px;">
+        </div>
+        <!-- Text Column -->
+        <div class="col-md-8">
+            <h2>Heterogenous and adaptive intermittent lifecycling using heterogeneous microarchitectures-- (work in progress) </h2>
+
+            <p class="lead">Batteryless intermittently-powered sensor nodes are deployed with no intelligence of the energy harvesting environment (or context) -- an environment which in reality can show heterogenous behavior (both in magnitude and variation) for the harvested rate. Given the different energy harvesting contexts where batteryless intermittently-powered sensor nodes are deployed, traditionally a node is either designed for a worst-case like scenario or for a best-case like scenario. Such nodes incur wastage of latent energy within the system and are not guaranteed to be available for timeliness needs for communication or sensing. Rather a node must be able operate at a worst-case like scenario, a best-case scenario and use the latent energy within the system to ensure energy-efficient computation for all contexts in between.  </p>
+        </div>
+    </div>
+
     <!-- Publications Section -->
     <section id="publications" class="my-5">
         <h2 class="text-primary text-center">Publications</h2>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Publication 1: <i>Back From the Dead- Towards Enabling Timely Computation and Communication</i> - <a href="link_to_publication" class="text-primary">Link</a></li>
-            <li class="list-group-item">Publication 2: <i>Lure: A simulator for networks of batteryless intermittent nodes.</i> - <a href="link_to_publication" class="text-primary">Link</a></li>
-            <li class="list-group-item">Publication 3: <i>Title of the paper</i> - <a href="link_to_publication" class="text-primary">Link</a></li>
+            <li class="list-group-item"> <p class = "lead"> <i><b> Lure: A simulator for networks of batteryless intermittent nodes</b></i></p> 
+                <p> Mathew L Wymore, Rohit Sahu, Thomas Ruminski, Vishal Deep, Morgan Ambourn, Gregory Ling, <b> Vishak Narayanan </b>, William Asiedu, Daji Qiao, Henry Duwe, in Performance Evaluation, 2024:  <a href="https://www.sciencedirect.com/science/article/pii/S0166531624000452" class="text-primary">Link</a></p></li>
+            <li class="list-group-item"> <p class = "lead"> <i><b> No battery, no problem: Challenges and opportunities in batteryless intermittent networks.</b></i></p> 
+                <p> Shen Fu, <b> Vishak Narayanan </b>, Mathew L Wymore, Vishal Deep, Henry Duwe, Daji Qiao, in Journal of Communications and Networks, 2023:  <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10387280" class="text-primary">Link</a></p></li>
+            <li class="list-group-item"> <p class = "lead"> <i><b> RF Energy Harvester with Constant Off-Time Charger for Batteryless Devices.</b></i></p> 
+                <p> Mahmoud Gshash, <b>Vishak Narayanan</b>, Henry Duwe, Nathan M Neihart, in IEEE 66th International Midwest Symposium on Circuits and Systems (MWSCAS), 2023:  <a href="https://ieeexplore.ieee.org/abstract/document/10406033" class="text-primary">Link</a></p></li>
+            <li class="list-group-item"> <p class = "lead"> <i><b> BOBBER A Prototyping Platform for Batteryless Intermittent Accelerators.</b></i></p> 
+                <p> <b>Vishak Narayanan</b>, Rohit Sahu, Jidong Sun, Henry Duwe, in ACM/SIGDA 33rd International Symposium on Field Programmable Gate Arrays, 2023:  <a href="https://dl.acm.org/doi/abs/10.1145/3543622.3573046" class="text-primary">Link</a></p></li>
+            <li class="list-group-item"> <p class = "lead"> <i><b> Experimental study of lifecycle management protocols for batteryless intermittent communication.</b></i></p> 
+                <p> Vishal Deep, Mathew L Wymore, Alexis A Aurandt, <b> Vishak Narayanan</b>, Shen Fu, Henry Duwe, Daji Qiao, in IEEE 18th International Conference on Mobile Ad Hoc and Smart Systems (MASS), 2021:  <a href="https://ieeexplore.ieee.org/abstract/document/9637119" class="text-primary">Link</a></p></li>
+            <li class="list-group-item"> <p class = "lead"> <i><b> Harc: A heterogeneous array of redundant persistent clocks for batteryless, intermittently-powered systems.</b></i></p> 
+                <p>Vishal Deep, <b>Vishak Narayanan</b>, Mathew Wymore, Daji Qiao, Henry Duwe, in IEEE 41st Real-Time Systems Symposium (RTSS), 2020:  <a href="https://ieeexplore.ieee.org/abstract/document/9355544" class="text-primary">Link</a></p></li>
+            <li class="list-group-item"> <p class = "lead"> <i><b> Lifecycle management protocols for batteryless, intermittent sensor nodes.</b></i></p> 
+                <p> Mathew L Wymore, Vishal Deep, <b> Vishak Narayanan</b>, Henry Duwe, Daji Qiao, in IEEE 39th International Performance Computing and Communications Conference (IPCCC), 2020:  <a href="https://ieeexplore.ieee.org/abstract/document/9391571" class="text-primary">Link</a></p></li>
+
         </ul>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="my-5 text-center">
-        <h2 class="text-primary">Contact Me</h2>
-        <p>Email: <a href="mailto:your.email@example.com" class="text-primary">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" class="text-primary">Your LinkedIn Profile</a></p>
-        <div class="mt-3">
-            <a href="https://twitter.com/yourprofile" class="btn btn-outline-primary btn-lg mx-2"><i class="fab fa-twitter"></i> Twitter</a>
-            <a href="https://github.com/yourprofile" class="btn btn-outline-dark btn-lg mx-2"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://linkedin.com/in/yourprofile" class="btn btn-outline-primary btn-lg mx-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        </div>
-    </section>
+
 </div>
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-4">
-    <p class="mb-0">&copy; 2024 Your Name. All rights reserved.</p>
+    <p class="mb-0">&copy; 2024 Vishak Narayanan. All rights reserved.</p>
 </footer>
 
 <!-- Bootstrap JS Bundle -->
